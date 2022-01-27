@@ -1,0 +1,61 @@
+<html>
+<head><title>Тест по рассказу "Дикий помещик".</title>
+<text>Записывать ответ ОДНОЙ ЦИФРОЙ БЕЗ СКОБОК.</text>
+<style>
+p {
+ font-size:24px;
+}
+input {
+ font-size:24px;
+}
+</style>
+</head>
+<body style="background-color:#d9ffd6;">
+<p>Выполните задания теста:</p>
+<p>№1. Какой совет прочитал помещик в газете «Весть»?<br>1)«Работай!» 2)«Терпи!» 3)«Старайся!»<input type="text" id="z_1"></p>
+<p>№2. В какую игру любил играть помещик?<br>1)Гранпасьянс 2)Шашки 3)Нарды<input type="text" id="z_2"></p>
+<p>№3. С кем подружился помещик?<br>1)С мужиком 2)С медведем 3)С исправником<input type="text" id="z_3"></p>
+<p>№4. На кого охотился помещик?<br>1)На оленей 2)На зайца 3)На лису<input type="text" id="z_4"></p>
+<p>№5. Кто приехал к помещику и выругал его?<br>1)Исправник 2)Царь 3)Барин<input type="text" id="z_5"></p>
+<p>№6. Что помещик планировал делать с клубникой, которую насажает?<br>1)Есть 2)Варить варенье 3)Продавать в Москве<input type="text" id="z_6"></p>
+<button onclick="proverit();">Проверить</button>
+<div id="rezultat"></div>
+<script>
+function proverit(){
+let pr_otv_zadachi_1 = 3;
+let pr_otv_zadachi_2 = 1;
+let pr_otv_zadachi_3 = 2;
+let pr_otv_zadachi_4 = 2;
+let pr_otv_zadachi_5 = 1;
+let pr_otv_zadachi_6 = 3;
+let otv_uch_1 = document.getElementById('z_1').value;
+let otv_uch_2 = document.getElementById('z_2').value;
+let otv_uch_3 = document.getElementById('z_3').value;
+let otv_uch_4 = document.getElementById('z_4').value;
+let otv_uch_5 = document.getElementById('z_5').value;
+let otv_uch_6 = document.getElementById('z_6').value;
+let ball = 0;
+if(otv_uch_1 == pr_otv_zadachi_1){
+ball +=1;
+}
+if(otv_uch_2 == pr_otv_zadachi_2){
+ball +=1;
+}
+if(otv_uch_3 == pr_otv_zadachi_3){
+ball +=1;
+}
+if(otv_uch_4 == pr_otv_zadachi_4){
+ball +=1;
+}
+if(otv_uch_5 == pr_otv_zadachi_5){
+ball +=1;
+if(otv_uch_6 == pr_otv_zadachi_6){
+ball +=1;
+}
+vsego_zadach = 6;
+procent_vip = ball/vsego_zadach * 100;
+document.getElementById('rezultat').innerHTML = "Задания выполнены верно на "+Math.round(procent_vip*100)/100+"%.";
+}
+</script>
+</body>
+</html>
